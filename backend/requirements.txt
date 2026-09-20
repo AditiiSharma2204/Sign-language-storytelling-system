@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2
+imageio-ffmpeg>=0.5      # bundles an FFmpeg binary - no system install needed
+opencv-python-headless>=4.9
+numpy>=1.26
+pytest>=8                # tests only
+httpx>=0.27              # API tests only

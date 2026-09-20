@@ -1,0 +1,14 @@
+services:
+  signstory:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - signstory-cache:/app/backend/outputs   # rendered videos survive restarts
+      # Sign clips are not in the image or the repo. If you have built them locally they are mounted here;
+      # otherwise the app still runs and fingerspells everything.
+      - ./asl_videos_std:/app/asl_videos_std:ro
+      - ./asl_videos_wlasl:/app/asl_videos_wlasl:ro
+    restart: unless-stopped
+volumes:
+  signstory-cache:
