@@ -4,6 +4,8 @@
 
 Type a sentence or short story. SignStory converts it into ASL word order (dropping articles and "to be", fronting time signs, moving wh-words last), matches each word to a sign clip, and stitches them into one video with synced captions.
 
+![SignStory translating a sentence into a signed video](docs/screenshots/result.png)
+
 ## Features
 
 - **ASL-aware NLP pipeline** – contraction handling, vocabulary-aware lemmatizer (`played → play`, `beaches → beach`), synonym map (`kids → children`, `mom → mother`), article/copula/auxiliary/preposition removal, time-first reordering, wh-word fronting, negation, tense detection.
@@ -15,6 +17,16 @@ Type a sentence or short story. SignStory converts it into ASL word order (dropp
 - **Sign dictionary** – searchable grid with hover previews and the synonyms mapped to each sign.
 - **Shareable links** – `/?q=your+sentence` runs the translation on load.
 - **Tested** – 29 tests (NLP rules and the API) for the NLP rules; reproducible evaluation script.
+
+## Screenshots
+
+| Compose a sentence | Signed video and metrics |
+|---|---|
+| ![Composer](docs/screenshots/translate.png) | ![Result](docs/screenshots/result.png) |
+
+**How it was translated:** every word is labelled as an exact sign, inflection, synonym, fingerspelled or dropped by ASL grammar.
+
+![How it was translated](docs/screenshots/how-it-was-translated.png)
 
 ## Architecture
 
